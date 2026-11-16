@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShopEase | Product Catalogue</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">ShopEase</a>
+    <span class="tagline">Everyday finds, simply presented. &nbsp; <a href="/admin/login">Admin</a></span>
+  </header>
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">PRODUCT CATALOGUE</p>
+      <h1>Find something useful.</h1>
+      <p>Browse the collection and open a product to learn more.</p>
+      <label class="search-label" for="search">Search products</label>
+      <input id="search" type="search" placeholder="Try headphones, bottle, notebook…">
+      <p id="status" class="status" role="status">Loading products…</p>
+    </section>
+    <section id="products" class="product-grid" aria-label="Products"></section>
+  </main>
+
+  <dialog id="details">
+    <button id="close-dialog" class="close" aria-label="Close details">×</button>
+    <div id="detail-content"></div>
+  </dialog>
+  <footer>ShopEase · Student project · Product information is for demonstration.</footer>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+  <script src="{{ url_for('static', filename='tracking.js') }}"></script>
+</body>
+</html>
